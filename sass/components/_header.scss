@@ -35,14 +35,15 @@
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navbar__link:hover,
-.navbar__link:focus 
-.navbar__link:active
-.navbar__link:visited {
+	&:hover,
+&:focus ,
+&:active ,
+&:visited {
 	color: var(--color-a);
 }
+}
+
+
 
 .navbar__link {
 	padding-top: 32px;
@@ -58,31 +59,7 @@
 	color: var(--color-a);
 }
 
-.navbar__link {
-	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.navbar__link:hover,
-.navbar__link:focus 
-.navbar__link:active
-.navbar__link:visited {
-	color: var(--color-a);
-}
-
-.navbar__link {
-	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navbar__link:hover,
-.navbar__link:focus 
-.navbar__link:active
-.navbar__link:visited {
-	color: var(--color-a);
-}
 
 .navbar__link {
 	color: var(--color-c);
@@ -112,9 +89,7 @@
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list__link:hover .header-list__icon , .header-list__link:focus .header-list__icon {
-	fill: var(--color-a);
-}
+
 
 .header-list__link {
 	display: flex;
@@ -128,32 +103,33 @@
 .header-list__icon {
 	margin-right: 10px;
 	fill: #757575;
+	transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	.header-list__link:hover & {
+		fill: var(--color-a);
+		
+	}
+.header-list__link:hover & , .header-list__link:focus & {
+	fill: var(--color-a);
+}
 }
 
-.header-list__link {
-	display: flex;
-	align-items: center;
-}
+
 
 .header-list__link {
 	transition-property: color;
 	transition-duration: 250ms;
+	display: flex;
+	align-items: center;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover{color: var(--color-a);
+	}
 }
 
-.header-list__link:hover {
-	color: var(--color-a);
-}
 
-.header-list__link:hover .header-list__icon {
-	fill: var(--color-a);
-	transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.header-list__icon {
-	fill: #757575;
-	margin-right: 10px;
-}
+
+
+
 
 .navbar {
 	margin-left: 93px;
@@ -162,9 +138,7 @@
 .navbar__link--active {
 	color: var(--color-a);
 	position: relative;
-}
-
-.navbar__link--active::after {
+	&::after{
 	position: absolute;
 	content: "";
 	display: block;
@@ -174,7 +148,10 @@
 	border-radius: 2px;
 	bottom: 0;
 	right: 0;
+	}
 }
+
+
 
 .header__logo--color {
 	color: var(--color-c);
@@ -204,6 +181,9 @@
 	margin-left: auto;
 }
 
-.header-list__item + .header-list__item {
-	margin-left: 30px;
+
+.header-list__item{
+	& + &{
+		margin-left: 30px;
+	}
 }

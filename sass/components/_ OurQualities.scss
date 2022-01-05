@@ -86,9 +86,7 @@
 	cursor: pointer;
 }
 
-.regular-customers__item:hover .regular-customers__icon {
-	fill: var(--color-a);
-}
+
 
 .regular-customers__link {
 	transition-property: border;
@@ -114,4 +112,7 @@
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	fill: #AFB1B8;
+	.regular-customers__item:hover & {
+		fill: var(--color-a);
+	}
 }

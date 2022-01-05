@@ -30,12 +30,13 @@
 	background-color: transparent;
 	color: #FFFFFF;
 	width: 358px;
+	&:focus{
+		outline: none;
+	border-color: #2196F3;
+	}
 }
 
-.footer-form__input:focus {
-	outline: none;
-	border-color: #2196F3;
-}
+
 
 .footer-form__button {
 	display: flex;
@@ -61,18 +62,14 @@
 	transition-property: background;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: background;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover , &:focus{
+		background: #188CE8;
+    }
+	
 }
 
-.footer-form__button:hover {
-	background: #188CE8;
-}
 
-.footer-form__button:focus {
-	background: #188CE8;
-}
+
 
 .footer-form__icon {
 	margin-left: 10px;
@@ -111,15 +108,16 @@
 	transition-property: background;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:focus , &:hover{
+		background-color: #2196F3;
+	}
+	& + &{
+		margin-left: 10px;
+	}
 }
 
-.box-with-messengers__item + .box-with-messengers__item {
-	margin-left: 10px;
-}
 
-.box-with-messengers__item:hover , .box-with-messengers__item:focus {
-	background-color: #2196F3;
-}
+
 
 .box-with-messengers__link {
 	width: 44px;

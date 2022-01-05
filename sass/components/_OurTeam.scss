@@ -19,11 +19,12 @@
 	background: var(--color-d);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
+	& + &{
+		margin-left: 30px;
+	}
 }
 
-.our-team__item + .our-team__item {
-	margin-left: 30px;
-}
+
 
 .our-team__box {
 	padding-top: 30px;
@@ -50,9 +51,7 @@
 	display: flex;
 }
 
-.networks-of-people__item + .networks-of-people__item {
-	margin-left: 10px;
-}
+
 
 .networks-of-people__item {
 	width: 44px;
@@ -64,11 +63,15 @@
 	transition-property: background;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover ,&:focus{
+		background: var(--color-a);
+	}
+	& + &{
+		margin-left: 10px;
+	}
 }
 
-.networks-of-people__item:hover , .networks-of-people__item:focus {
-	background: var(--color-a);
-}
+
 
 .networks-of-people__link {
 	width: 100%;
@@ -76,15 +79,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	&:hover{
+	fill: #FFFFFF;	
+	}
 }
 
-.networks-of-people__link:hover .networks-of-people__icon {
-	fill: var(--color-d);
-}
 
-.networks-of-people__link:hover {
-	fill: #FFFFFF;
-}
+
+
 
 .networks-of-people__icon {
 	background-position: center;
@@ -97,8 +99,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	.networks-of-people__link:hover & {
+		fill: var(--color-d);
+		&:hover{
+			fill: var(--color-d);
+		}
+	}
 }
 
-.networks-of-people__icon:hover {
-	fill: var(--color-d);
-}

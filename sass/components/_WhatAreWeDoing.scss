@@ -10,13 +10,14 @@
 
 
 
-.what-are-we-doing__item + .what-are-we-doing__item {
-	margin-left: 30px;
-}
+
 
 .what-are-we-doing__item {
 	width: 370px;
 	height: 294px;
+	& + &{
+		margin-left: 30px;
+	}
 }
 
 .what-are-we-doing--bgcolor {

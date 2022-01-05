@@ -10,11 +10,12 @@
 	width: 100%;
 	display: block;
 	color: #757575;
+	& + &{
+		margin-top: 10px;
+	}
 }
 
-.form__label + .form__label {
-	margin-top: 10px;
-}
+
 
 .form__input {
 	margin-top: 4px;
@@ -28,27 +29,30 @@
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	padding-left: 42px;
-}
-
-.form__input:focus {
-	outline: none;
+	&:focus{
+			outline: none;
 	border-color: #2196F3;
+	}
 }
 
-.form__input:focus ~ .form__icon {
-	transition-property: fill;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form__input:focus ~ .form__icon {
-	fill: var(--color-a);
-}
+
 
 .form__icon {
 	position: absolute;
 	left: 10px;
 	top: 50%;
+
+	.form__input:focus ~ & {
+		transition-property: fill;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	
+	.form__input:focus ~ & {
+		fill: var(--color-a);
+	}
+
 }
 
 .form__textarea {
@@ -64,12 +68,12 @@
 	transition-property: border-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:focus{
+		outline: none;
+	border-color: #2196F3;	
+	}
 }
 
-.form__textarea:focus {
-	outline: none;
-	border-color: #2196F3;
-}
 
 .checkbox-group {
 	align-items: center;
@@ -136,30 +140,32 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	&:focus  & {
+		transition-property: fill;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	
+	&:focus  & {
+		fill: #2196F3;
+	}
 }
 
-.modal__button:hover  .modal__icon {
-	transition-property: fill;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal__button:hover  .modal__icon {
-	fill: #2196F3;
-}
-
-.modal__button:focus  .modal__icon {
-	transition-property: fill;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__button:focus  .modal__icon {
-	fill: #2196F3;
-}
 
 .modal__icon {
 	fill: #000000;
+	.modal__button:hover  & {
+		transition-property: fill;
+		transition-duration: 250ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	
+	.modal__button:hover  & {
+		fill: #2196F3;
+	}
+	
+
 }
 
 .modal__title {
@@ -197,15 +203,12 @@
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover ,&:focus{
+	background: #188CE8;	
+	}
 }
 
-.checkbox-group__button:hover {
-	background: #188CE8;
-}
 
-.checkbox-group__button:focus {
-	background: #188CE8;
-}
 
 .backdrop {
 	position: fixed;

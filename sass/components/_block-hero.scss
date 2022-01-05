@@ -23,19 +23,17 @@
 }
 
 .block-hero__button {
-	transition-property: color;
+	transition-property: color ,background ;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:focus ,&:hover{
+		color: var(--color-d);
+	background: var(--color-m);	
+	}
 }
 
-.block-hero__button:hover ,
-.block-hero__button:focus {
-	color: var(--color-d);
-	background: var(--color-m);
-}
+
 
 .block-hero__button {
 	font-weight: bold;
