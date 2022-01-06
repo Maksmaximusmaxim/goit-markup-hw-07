@@ -37,8 +37,7 @@
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	&:hover,
 &:focus ,
-&:active ,
-&:visited {
+{
 	color: var(--color-a);
 }
 }
@@ -134,8 +133,7 @@
 .navbar {
 	margin-left: 93px;
 }
-
-.navbar__link--active {
+.first-page{
 	color: var(--color-a);
 	position: relative;
 	&::after{
@@ -150,6 +148,22 @@
 	right: 0;
 	}
 }
+.second-page{
+	color: var(--color-a);
+	position: relative;
+	&::after{
+	position: absolute;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	background: #2196F3;
+	border-radius: 2px;
+	bottom: 0;
+	right: 0;
+	}
+}
+
 
 
 
