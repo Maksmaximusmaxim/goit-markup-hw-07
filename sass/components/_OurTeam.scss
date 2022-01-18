@@ -10,8 +10,16 @@
 }
 
 .our-team__list {
-	display: flex;
+	@media screen and (min-width:768px){
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@media screen and (min-width:1200px){
+			display: flex;
 	margin: 0px;
+	}
+
+
 }
 
 .our-team__item {

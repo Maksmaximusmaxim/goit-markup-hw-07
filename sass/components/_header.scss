@@ -125,7 +125,15 @@
 
 .navbar {
 	margin-left: 93px;
+	display: none;
+	@media screen and (min-width:768px){
+		display: block;
+	}
 }
+
+
+
+
 
 .navbar__link--active {
 	color: var(--color-a);
@@ -159,23 +167,35 @@
 	margin-bottom: 0px;
 	margin-right: 0px;
 	color: var(--color-a);
+	@media screen and (max-width:768px){
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
 }
 
 .header-list {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
-	display: flex;
 	padding-left: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding: 0px;
 	margin-left: auto;
+	display: none;
+	@media screen and (min-width:768px){
+		display: block;
+	}
+	@media screen and (min-width:1200px){
+		display: flex;
+	}
 }
 
 
 .header-list__item{
-	& + &{
-		margin-left: 30px;
+	@media  screen and (min-width:1200px){
+		& + & {
+			margin-left: 30px;
+		}
 	}
 }

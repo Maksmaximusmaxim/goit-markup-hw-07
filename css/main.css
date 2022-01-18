@@ -27,11 +27,28 @@ h3 {
 }
 
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 .container {
@@ -204,6 +221,13 @@ body {
 
 .navbar {
   margin-left: 93px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: block;
+  }
 }
 
 .navbar__link--active {
@@ -239,22 +263,43 @@ body {
   color: var(--color-a);
 }
 
+@media screen and (max-width: 768px) {
+  .header__logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
 .header-list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px;
   margin-left: auto;
+  display: none;
 }
 
-.header-list__item + .header-list__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .header-list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-list__item + .header-list__item {
+    margin-left: 30px;
+  }
 }
 
 /* footer */
@@ -492,23 +537,51 @@ body {
 /* наши качества */
 .OurAdvantages {
   padding-left: 0px;
+  margin: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px;
 }
 
 .OurAdvantages__item + .OurAdvantages__item {
   margin-left: 30px;
 }
 
-.OurAdvantages__item {
-  width: 270px;
+@media screen and (min-width: 1200px) {
+  .OurAdvantages__item {
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .OurAdvantages__item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .OurAdvantages__item {
+    width: 450px;
+  }
 }
 
 .OurAdvantages__box {
-  width: 270px;
+  width: 450px;
   height: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  .OurAdvantages__box {
+    width: 354px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .OurAdvantages__box {
+    width: 270px;
+    height: 120px;
+  }
 }
 
 .OurAdvantages__box {
@@ -555,6 +628,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   font-weight: normal;
+  letter-spacing: 0.03em;
 }
 
 /* постоянные клиенты */
@@ -933,11 +1007,23 @@ body {
   text-align: center;
 }
 
-.our-team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px;
+@media screen and (min-width: 768px) {
+  .our-team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+  }
 }
 
 .our-team__item {
@@ -1287,6 +1373,15 @@ body {
 
 .what-are-we-doing {
   padding-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1199px) {
+  .what-are-we-doing {
+    display: none;
+  }
 }
 
 .what-are-we-doing__title {
